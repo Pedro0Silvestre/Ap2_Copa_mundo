@@ -84,12 +84,12 @@ src/main/java/com/example/ap2/
 ├── controller/     # Exposição dos endpoints REST
 ├── service/        # Regras de negócio e validações
 ├── repository/     # Persistência de dados
-└── entity/         # Entidades JPA e relacionamentos
+└── model/         # Entidades JPA e relacionamentos
 ```
 
 ---
 
-## entity/
+## model/
 
 ### O que contém
 
