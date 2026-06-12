@@ -247,6 +247,7 @@ public class JogadorService {
         this.jogadorRepository = jogadorRepository;
     }
 }
+```
 
 # 🧮 Princípios SOLID
 
