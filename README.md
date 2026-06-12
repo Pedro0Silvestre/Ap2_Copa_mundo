@@ -228,6 +228,26 @@ public interface JogadorRepository extends JpaRepository<Jogador, Long> {
 
 ---
 
+## C. Singleton Pattern (Padrão Singleton)
+
+Garante que uma classe tenha apenas uma única instância na memória durante todo o ciclo de vida da aplicação, centralizando o acesso e otimizando o uso de recursos. No projeto, o Spring Boot gerencia automaticamente os Controllers e Services sob este escopo por padrão.
+
+### Exemplo
+
+```java
+@Service
+public class JogadorService {
+
+    // O Spring cria apenas UMA instância desta classe na memória.
+    // Sempre que o JogadorController ou o PartidaService precisarem dela,
+    // o Spring fornecerá exatamente a mesma referência já existente.
+    private final JogadorRepository jogadorRepository;
+
+    public JogadorService(JogadorRepository jogadorRepository) {
+        this.jogadorRepository = jogadorRepository;
+    }
+}
+
 # 🧮 Princípios SOLID
 
 ## Single Responsibility Principle (SRP)
